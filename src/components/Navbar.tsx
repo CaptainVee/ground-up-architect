@@ -30,7 +30,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
         <button onClick={() => scrollTo("home")} className="font-display text-3xl text-primary-foreground tracking-wider">
-          APEX<span className="text-secondary">BUILD</span>
+          EDOSON<span className="text-secondary"> CONSTRUCTIONS AND WATER RESOURCES LIMITED</span>
         </button>
 
         <div className="hidden md:flex items-center gap-8">

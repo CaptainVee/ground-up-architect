@@ -1,20 +1,20 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project4 from "@/assets/project-4.jpg";
-import project5 from "@/assets/project-5.jpg";
-import project6 from "@/assets/project-6.jpg";
+import project1 from "@/assets/project-1.jpeg";
+import project2 from "@/assets/project-2.jpeg";
+import project3 from "@/assets/project-3.jpeg";
+import project4 from "@/assets/project-4.jpeg";
+import project5 from "@/assets/project-5.jpeg";
+import project6 from "@/assets/project-6.jpeg";
 
 const projects = [
-  { image: project1, title: "Skyline Tower", category: "Commercial", location: "Downtown Metro" },
-  { image: project2, title: "Palm Villa Estate", category: "Residential", location: "Coastal Bay" },
-  { image: project3, title: "Vertex Office Park", category: "Commercial", location: "Business District" },
-  { image: project4, title: "Atlas Warehouse", category: "Industrial", location: "Port Area" },
-  { image: project5, title: "Grand Overpass", category: "Infrastructure", location: "Highway 12" },
-  { image: project6, title: "Central Mall", category: "Commercial", location: "City Center" },
+  { image: project1, title: "6 Units of 2 Bedroom Flats", category: "Commercial", location: "Villa Estate Ozalla Abor, Enugu North, Enugu State" },
+  { image: project2, title: "4 Bedroom Duplex", category: "Residential", location: "Amankpaka, Ugwogo Nike, Enugu East, Enugu State." },
+  { image: project3, title: "4 Bedroom Duplex", category: "Residential", location: "Business District" },
+  { image: project4, title: "10 pens of a modern pig farm", category: "Industrial", location: "Vannis Farms and Equipment, Odobudo Ubahu, Nkanu East, Enugu State" },
+  { image: project5, title: "Soil test, for geotechnical properties of the soil", category: "Residential", location: "Army Barracks, 82 Division, Abakpa Junction, Enugu" },
+  { image: project6, title: "borehole and construction of a fish pond", category: "Industrial", location: "Vannis Farms and Equipment, Odobudo Ubahu, Nkanu East, Enugu State" },
 ];
 
 const categories = ["All", "Commercial", "Residential", "Industrial", "Infrastructure"];

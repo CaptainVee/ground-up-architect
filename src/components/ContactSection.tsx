@@ -46,9 +46,9 @@ const ContactSection = () => {
             </div>
 
             {[
-              { icon: MapPin, label: "Our Office", value: "123 Construction Ave, Building District" },
-              { icon: Phone, label: "Phone", value: "+1 (234) 567-8900" },
-              { icon: Mail, label: "Email", value: "info@apexbuild.com" },
+              { icon: MapPin, label: "Our Office", value: "4 Victor Anukwu Close, Golf Estate, GRA Enugu" },
+              { icon: Phone, label: "Phone", value: "+234 8108730679" },
+              { icon: Mail, label: "Email", value: "edosonconstructions@gmail.com" },
             ].map((item) => (
               <div key={item.label} className="flex gap-4 items-start">
                 <div className="w-12 h-12 rounded-sm bg-secondary/10 flex items-center justify-center flex-shrink-0">

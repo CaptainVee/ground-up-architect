@@ -72,9 +72,9 @@ const HeroSection = () => {
       <div className="absolute bottom-0 left-0 right-0 bg-primary/80 backdrop-blur-sm border-t border-primary-foreground/10">
         <div className="container mx-auto px-4 py-6 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { value: "500+", label: "Projects Completed" },
-            { value: "20+", label: "Years Experience" },
-            { value: "150+", label: "Team Members" },
+            { value: "30+", label: "Projects Completed" },
+            { value: "7+", label: "Years Experience" },
+            { value: "50+", label: "Team Members" },
             { value: "98%", label: "Client Satisfaction" },
           ].map((stat, i) => (
             <motion.div

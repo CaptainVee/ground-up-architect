@@ -4,15 +4,15 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "David Mensah",
-    role: "Property Developer",
-    text: "ApexBuild delivered our 12-story residential complex ahead of schedule and within budget. Their attention to structural integrity and finishing quality is unmatched.",
+    name: "Mrs. Udoka Ann",
+    role: "Business Developer",
+    text: "I have known Edoson Constructions and Water Resources Limited since 2022 and can confidently attest to the quality of their work. They completed a bungalow for me and another for my brother, and are currently handling his 4-bedroom duplex in Enugu State. Their professionalism, timeliness, and attention to detail are highly commendable. I strongly recommend them to anyone seeking a reliable construction company.",
     rating: 5,
   },
   {
-    name: "Sarah Okonkwo",
+    name: "Okonkwo Obinna",
     role: "Business Owner",
-    text: "We hired ApexBuild for our warehouse project. The team was professional, transparent with costs, and the final result exceeded our expectations. Highly recommended.",
+    text: "Honestly, I was surprised and overwhelmed when we finally got a good amount of water from the borehole, especially since our area is hilly and dry. I never believed we could get water, but you proved your expertise and delivered perfectly. I remember our first meeting — you patiently explained everything and assured us you would deliver. Though I had initial doubts, my husband trusted you, and you truly kept your promise. Well done — you really know your work. Wishing you more knowledge and looking forward to doing more business with you.",
     rating: 5,
   },
   {
@@ -24,7 +24,7 @@ const testimonials = [
   {
     name: "Linda Nkomo",
     role: "Architect",
-    text: "As a fellow industry professional, I can confidently say ApexBuild's structural design team is among the best. Their engineering solutions are both innovative and practical.",
+    text: "As a fellow industry professional, I can confidently say Edoson Construction's structural design team is among the best. Their engineering solutions are both innovative and practical.",
     rating: 5,
   },
 ];

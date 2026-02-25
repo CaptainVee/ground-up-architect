@@ -28,10 +28,10 @@ const AboutSection = () => {
             </div>
             <h2 className="font-display text-5xl md:text-6xl text-section-dark-foreground mb-6">
               BUILDING TRUST<br />
-              <span className="text-gradient-gold">SINCE 2005</span>
+              <span className="text-gradient-gold">SINCE 2019</span>
             </h2>
             <p className="font-body text-section-dark-foreground/70 leading-relaxed mb-8">
-              With over two decades of experience, ApexBuild has become a trusted name in construction
+              With almost a decade of experience, Edoson Constructions has become a trusted name in construction
               and engineering. We combine traditional craftsmanship with modern technology to deliver
               projects that stand the test of time. Our commitment to quality, safety, and client
               satisfaction drives everything we do.
@@ -66,22 +66,22 @@ const AboutSection = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="bg-secondary/10 rounded-sm p-8 text-center">
-                  <div className="font-display text-5xl text-secondary">500+</div>
+                  <div className="font-display text-5xl text-secondary">30+</div>
                   <div className="font-body text-xs uppercase tracking-wider text-section-dark-foreground/60 mt-2">Projects Done</div>
                 </div>
                 <div className="bg-secondary/10 rounded-sm p-8 text-center">
-                  <div className="font-display text-5xl text-secondary">20+</div>
+                  <div className="font-display text-5xl text-secondary">7+</div>
                   <div className="font-body text-xs uppercase tracking-wider text-section-dark-foreground/60 mt-2">Years Active</div>
                 </div>
               </div>
               <div className="space-y-4 mt-8">
                 <div className="bg-secondary/10 rounded-sm p-8 text-center">
-                  <div className="font-display text-5xl text-secondary">150+</div>
+                  <div className="font-display text-5xl text-secondary">50+</div>
                   <div className="font-body text-xs uppercase tracking-wider text-section-dark-foreground/60 mt-2">Team Members</div>
                 </div>
                 <div className="bg-secondary/10 rounded-sm p-8 text-center">
-                  <div className="font-display text-5xl text-secondary">12</div>
-                  <div className="font-body text-xs uppercase tracking-wider text-section-dark-foreground/60 mt-2">Countries</div>
+                  <div className="font-display text-5xl text-secondary">4</div>
+                  <div className="font-body text-xs uppercase tracking-wider text-section-dark-foreground/60 mt-2">States</div>
                 </div>
               </div>
             </div>
