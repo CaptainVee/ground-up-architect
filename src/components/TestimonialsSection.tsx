@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-import { Star, Quote } from "lucide-react";
+import { useRef, useState } from "react";
+import { Star, Quote, ChevronDown } from "lucide-react";
 
 const testimonials = [
   {
@@ -16,9 +16,9 @@ const testimonials = [
     rating: 5,
   },
   {
-    name: "James Adeyemi",
-    role: "Municipal Director",
-    text: "The borehole drilling and land surveying services were top-notch. They used modern equipment and completed the entire project in record time with impeccable accuracy.",
+    name: "Mariweze Sebastian (God's Love Multi-Project Resources Ltd)",
+    role: "Business Owner",
+    text: "I met Edison Construction Company at a time when I had almost lost hope in the engineering aspect of construction. My house was beautiful, but the finishing was poor, and over time it started decaying. Tiles were pulling off, and it felt like I had wasted a lot of money. They carefully inspected the house, explained the real issues — including the type of sand and soil that had been used — and assured me they could restore it. After completing the work, I was amazed. Today, anyone who visits cannot believe it is the same house. Up till now, I have not painted the house, yet you would not know. That is the quality of finishing they delivered. They have also handled other projects for me in different places, and I am very impressed with their work.",
     rating: 5,
   },
   {
@@ -32,6 +32,14 @@ const testimonials = [
 const TestimonialsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [expanded, setExpanded] = useState<{ [key: string]: boolean }>({});
+
+  const toggleExpand = (name: string) => {
+    setExpanded((prev) => ({
+      ...prev,
+      [name]: !prev[name],
+    }));
+  };
 
   return (
     <section className="py-24 bg-background" ref={ref}>
@@ -65,7 +73,28 @@ const TestimonialsSection = () => {
                   <Star key={j} className="w-4 h-4 fill-secondary text-secondary" />
                 ))}
               </div>
-              <p className="font-body text-sm text-muted-foreground leading-relaxed mb-6">"{t.text}"</p>
+              <p
+                className={`font-body text-sm text-muted-foreground leading-relaxed mb-4 ${
+                  !expanded[t.name] ? "line-clamp-3" : ""
+                }`}
+              >
+                "{t.text}"
+              </p>
+
+              {t.text.split(" ").length > 50 && (
+                <button
+                  onClick={() => toggleExpand(t.name)}
+                  className="font-body text-sm text-secondary hover:text-secondary/80 transition-colors mb-4 flex items-center gap-1 group"
+                >
+                  {expanded[t.name] ? "Read Less" : "Read More"}
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform group-hover:translate-y-0.5 ${
+                      expanded[t.name] ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+              )}
+
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center">
                   <span className="font-display text-lg text-secondary">{t.name[0]}</span>

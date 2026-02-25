@@ -1,31 +1,36 @@
-import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { motion } from "framer-motion";
+import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { projectsData, categories } from "@/data/projects";
+import { useInView } from "framer-motion";
+import Navbar from "@/components/Navbar";
 
-const projects = projectsData.slice(0, 6);
-
-const ProjectsSection = () => {
+const Projects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [filter, setFilter] = useState("All");
   const navigate = useNavigate();
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   const filteredProjects =
     filter === "All"
-      ? projects
-      : projects.filter((project) => project.category === filter);
+      ? projectsData
+      : projectsData.filter((project) => project.category === filter);
 
   return (
-    <section id="projects" className="py-24 bg-section-dark" ref={ref}>
-      <div className="container mx-auto px-4">
+    <div className="min-h-screen bg-section-dark pb-24">
+      <Navbar />
+      <div className="container mx-auto px-4 pt-32" ref={ref}>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-8 h-[2px] bg-secondary" />
@@ -35,17 +40,22 @@ const ProjectsSection = () => {
             <div className="w-8 h-[2px] bg-secondary" />
           </div>
 
-          <h2 className="font-display text-5xl md:text-6xl text-section-dark-foreground">
-            OUR PROJECTS
-          </h2>
+          <h1 className="font-display text-5xl md:text-7xl text-section-dark-foreground mb-6">
+            ALL PROJECTS
+          </h1>
+
+          <p className="font-body text-lg text-section-dark-foreground/60 max-w-2xl mx-auto">
+            Explore our comprehensive portfolio of completed and ongoing projects
+            across various sectors and categories.
+          </p>
         </motion.div>
 
         {/* Filter Buttons */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
-          transition={{ delay: 0.3 }}
-          className="flex justify-center gap-2 flex-wrap mb-12"
+          transition={{ delay: 0.2 }}
+          className="flex justify-center gap-2 flex-wrap mb-16"
         >
           {categories.map((cat) => (
             <button
@@ -73,7 +83,7 @@ const ProjectsSection = () => {
               layout
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.1 * index, duration: 0.5 }}
+              transition={{ delay: 0.1 * (index % 6), duration: 0.5 }}
               onClick={() => navigate(`/projects/${project.id}`)}
               className="group relative overflow-hidden rounded-sm cursor-pointer"
             >
@@ -95,34 +105,35 @@ const ProjectsSection = () => {
                   {project.title}
                 </h3>
 
-                <p className="font-body text-sm text-primary-foreground/60">
+                <p className="font-body text-sm text-primary-foreground/60 mb-2">
                   {project.location}
                 </p>
 
-                <ArrowUpRight className="absolute top-4 right-4 w-6 h-6 text-secondary" />
+                <div className="flex items-center justify-between">
+                  <span className="font-body text-xs text-primary-foreground/70">
+                    {project.status}
+                  </span>
+                  <ArrowUpRight className="w-6 h-6 text-secondary" />
+                </div>
               </div>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* See More Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.6, duration: 0.5 }}
-          className="flex justify-center mt-12"
-        >
-          <button
-            onClick={() => navigate("/projects")}
-            className="font-display text-lg px-8 py-3 bg-secondary text-secondary-foreground rounded-sm hover:bg-secondary/90 transition-all duration-300 flex items-center gap-2 group"
+        {filteredProjects.length === 0 && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-center py-12"
           >
-            See All Projects
-            <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-          </button>
-        </motion.div>
+            <p className="font-body text-lg text-section-dark-foreground/60">
+              No projects found in this category.
+            </p>
+          </motion.div>
+        )}
       </div>
-    </section>
+    </div>
   );
 };
 
-export default ProjectsSection;
+export default Projects;

@@ -31,7 +31,7 @@ const AboutSection = () => {
               <span className="text-gradient-gold">SINCE 2019</span>
             </h2>
             <p className="font-body text-section-dark-foreground/70 leading-relaxed mb-8">
-              With almost a decade of experience, Edoson Constructions has become a trusted name in construction
+              With almost a decade of experience, Edoson Constructions and water resources has become a trusted name in construction
               and engineering. We combine traditional craftsmanship with modern technology to deliver
               projects that stand the test of time. Our commitment to quality, safety, and client
               satisfaction drives everything we do.
