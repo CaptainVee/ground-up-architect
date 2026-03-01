@@ -1,14 +1,37 @@
-import project1 from "@/assets/project-1.jpeg";
-import project2 from "@/assets/project-2.jpeg";
-import project3 from "@/assets/project-3.jpeg";
-import project4 from "@/assets/project-4.jpeg";
-import project5 from "@/assets/project-5.jpeg";
-import project6 from "@/assets/project-6.jpeg";
+import p1Main from "@/assets/projects/project-1/project-1-01.jpeg";
+import p1Gallery1 from "@/assets/projects/project-1/project-1-02.jpeg";
+import p1Gallery2 from "@/assets/projects/project-1/project-1-03.jpeg";
+import p1Gallery3 from "@/assets/projects/project-1/project-1-04.jpeg";
+
+import p2Main from "@/assets/projects/project-2/project-2-01.jpeg";
+import p2Gallery1 from "@/assets/projects/project-2/project-2-02.jpeg";
+import p2Gallery2 from "@/assets/projects/project-2/project-2-03.jpeg";
+import p2Gallery3 from "@/assets/projects/project-2/project-2-04.jpeg";
+
+import p3Main from "@/assets/projects/project-3/project-3-01.jpeg";
+import p3Gallery1 from "@/assets/projects/project-3/project-3-02.jpeg";
+import p3Gallery2 from "@/assets/projects/project-3/project-3-03.jpeg";
+// import p3Gallery3 from "@/assets/projects/project-3/project-3-04.jpeg";
+
+import p4Main from "@/assets/projects/project-4/project-4-01.jpeg";
+import p4Gallery1 from "@/assets/projects/project-4/project-4-02.jpeg";
+import p4Gallery2 from "@/assets/projects/project-4/project-4-03.jpeg";
+import p4Gallery3 from "@/assets/projects/project-4/project-4-04.jpeg";
+
+import p5Main from "@/assets/projects/project-5/project-5-01.jpeg";
+import p5Gallery1 from "@/assets/projects/project-5/project-5-02.jpeg";
+import p5Gallery2 from "@/assets/projects/project-5/project-5-03.jpeg";
+import p5Gallery3 from "@/assets/projects/project-5/project-5-04.jpeg";
+
+import p6Main from "@/assets/projects/project-6/project-6-01.jpeg";
+import p6Gallery1 from "@/assets/projects/project-6/project-6-02.jpeg";
+import p6Gallery2 from "@/assets/projects/project-6/project-6-03.jpeg";
+import p6Gallery3 from "@/assets/projects/project-6/project-6-04.jpeg";
 
 export const projectsData = [
   {
     id: 1,
-    image: project1,
+    image: p1Main,
     title: "6 Units of 2 Bedroom Flats",
     category: "Commercial",
     location: "Villa Estate Ozalla Abor, Enugu North, Enugu State",
@@ -25,12 +48,12 @@ export const projectsData = [
         "Adequate parking space",
         "24/7 security system",
       ],
-      gallery: [project1, project2, project3],
+      gallery: [p1Main,p1Gallery1, p1Gallery2, p1Gallery3],
     },
   },
   {
     id: 2,
-    image: project2,
+    image: p2Main,
     title: "4 Bedroom Duplex",
     category: "Residential",
     location: "Amankpaka, Ugwogo Nike, Enugu East, Enugu State",
@@ -47,15 +70,15 @@ export const projectsData = [
         "Home theater",
         "Smart home automation",
       ],
-      gallery: [project2, project3, project4],
+      gallery: [p2Main, p2Gallery1, p2Gallery2, p2Gallery3],
     },
   },
   {
     id: 3,
-    image: project3,
+    image: p3Main,
     title: "2-Lane Asphalt Road Construction",
     category: "Infrastructure",
-    location: "Nsukka-Obollo Road, Enugu State",
+    location: "Mmaku, Awgu, Enugu State",
     description:
       "Complete road construction project featuring asphalt paving, drainage systems, and lane markings for improved transportation.",
     year: 2023,
@@ -69,12 +92,12 @@ export const projectsData = [
         "Road markings & signage",
         "Shoulder stabilization",
       ],
-      gallery: [project3, project4, project5],
+      gallery: [p3Main, p3Gallery1, p3Gallery2],
     },
   },
   {
     id: 4,
-    image: project4,
+    image: p4Main,
     title: "10 Pens of a Modern Pig Farm",
     category: "Industrial",
     location: "Vannis Farms and Equipment, Odobudo Ubahu, Nkanu East, Enugu State",
@@ -91,12 +114,12 @@ export const projectsData = [
         "Waste management",
         "Proper ventilation",
       ],
-      gallery: [project4, project5, project6],
+      gallery: [p4Main, p4Gallery1, p4Gallery2, p4Gallery3],
     },
   },
   {
     id: 5,
-    image: project5,
+    image: p5Main,
     title: "Soil Test for Geotechnical Properties",
     category: "Infrastructure",
     location: "Army Barracks, 82 Division, Abakpa Junction, Enugu",
@@ -113,12 +136,12 @@ export const projectsData = [
         "Detailed reports",
         "Engineering recommendations",
       ],
-      gallery: [project5, project6, project1],
+      gallery: [p5Main, p5Gallery1, p5Gallery2, p5Gallery3],
     },
   },
   {
     id: 6,
-    image: project6,
+    image: p6Main,
     title: "Borehole and Construction of a Fish Pond",
     category: "Industrial",
     location: "Vannis Farms and Equipment, Odobudo Ubahu, Nkanu East, Enugu State",
@@ -135,139 +158,7 @@ export const projectsData = [
         "Fish pond construction",
         "Water circulation system",
       ],
-      gallery: [project6, project1, project2],
-    },
-  },
-  {
-    id: 7,
-    image: project1,
-    title: "Premium Office Complex",
-    category: "Commercial",
-    location: "Independence Layout, Enugu State",
-    description:
-      "State-of-the-art office complex with modern facilities and sustainable design principles.",
-    year: 2023,
-    status: "Completed",
-    details: {
-      duration: "16 months",
-      scope: "Design & Construction",
-      features: [
-        "8 floors",
-        "Green building certification",
-        "Solar panels",
-        "Smart parking system",
-      ],
-      gallery: [project1, project2, project3, project4],
-    },
-  },
-  {
-    id: 8,
-    image: project2,
-    title: "Cottage Community Development",
-    category: "Residential",
-    location: "Emene, Enugu State",
-    description:
-      "Planned residential community featuring multiple cottage-style homes with shared amenities.",
-    year: 2022,
-    status: "Completed",
-    details: {
-      duration: "20 months",
-      scope: "Masterplanning & Construction",
-      features: [
-        "50 units",
-        "Central park",
-        "Community center",
-        "Security perimeter",
-      ],
-      gallery: [project2, project3, project4, project5],
-    },
-  },
-  {
-    id: 9,
-    image: project4,
-    title: "Poultry Complex and Processing Facility",
-    category: "Industrial",
-    location: "Nsukka, Enugu State",
-    description:
-      "Comprehensive poultry facility with modern breeding infrastructure and processing capabilities.",
-    year: 2021,
-    status: "Completed",
-    details: {
-      duration: "10 months",
-      scope: "Design & Construction",
-      features: [
-        "20 breeding pens",
-        "Hatchery",
-        "Processing unit",
-        "Biosecurity system",
-      ],
-      gallery: [project4, project5, project6, project1],
-    },
-  },
-  {
-    id: 10,
-    image: project3,
-    title: "Educational Campus Infrastructure",
-    category: "Infrastructure",
-    location: "Udenu, Enugu State",
-    description:
-      "Multi-building educational infrastructure project with modern teaching facilities.",
-    year: 2024,
-    status: "In Progress",
-    details: {
-      duration: "24 months",
-      scope: "Design & Construction",
-      features: [
-        "Lecture halls",
-        "Labs",
-        "Auditorium",
-        "Student facilities",
-      ],
-      gallery: [project3, project4, project5, project6],
-    },
-  },
-  {
-    id: 11,
-    image: project5,
-    title: "Commercial Plaza Development",
-    category: "Commercial",
-    location: "Ogui, Enugu State",
-    description:
-      "Large-scale commercial plaza with retail spaces and high-end dining facilities.",
-    year: 2024,
-    status: "In Progress",
-    details: {
-      duration: "18 months",
-      scope: "Design & Construction",
-      features: [
-        "100+ retail units",
-        "Food court",
-        "Parking garage",
-        "Wet market",
-      ],
-      gallery: [project5, project6, project1, project2],
-    },
-  },
-  {
-    id: 12,
-    image: project6,
-    title: "Urban Waterfront Development",
-    category: "Infrastructure",
-    location: "Coal City Road, Enugu State",
-    description:
-      "Integrated waterfront project combining residential, commercial, and recreational spaces.",
-    year: 2024,
-    status: "In Progress",
-    details: {
-      duration: "30 months",
-      scope: "Masterplanning & Development",
-      features: [
-        "Mixed-use space",
-        "Boardwalk",
-        "Marina",
-        "Public spaces",
-      ],
-      gallery: [project6, project1, project2, project3],
+      gallery: [p6Main, p6Gallery1, p6Gallery2, p6Gallery3],
     },
   },
 ];

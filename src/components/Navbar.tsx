@@ -4,7 +4,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { Menu, X, MessageCircle } from "lucide-react";
 import logo from "@/assets/logo.png";
 
-const navItems = ["Home", "Services", "About", "Contact"];
+const navItems = ["Home", "Services", "Projects", "About", "Contact"];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +19,13 @@ const Navbar = () => {
   }, []);
 
   const scrollTo = (id: string) => {
+    // Handle Projects navigation separately
+    if (id === "Projects") {
+      navigate("/projects");
+      setIsOpen(false);
+      return;
+    }
+
     // If we're not on the home page, navigate to home first
     if (location.pathname !== "/") {
       navigate("/");
