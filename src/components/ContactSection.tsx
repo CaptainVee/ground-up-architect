@@ -83,9 +83,9 @@ const ContactSection = () => {
   };
 
   const handleWhatsAppClick = () => {
-    const message = `Hello Edoson Constructions,\n\nMy name is ${formData.name || "There"}.\n\nI'm interested in ${formData.service}.\n\n${formData.message || "I'd like to inquire about your services."}\n\nYou can reach me at:\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nThank you!`;
+    const message = `Hello Edoson Constructions and Water Resources,\n\nMy name is ${formData.name || "There"}.\n\nI'm interested in ${formData.service}.\n\n${formData.message || "I'd like to inquire about your services."}\n\nYou can reach me at:\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nThank you!`;
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/2348108730679?text=${encodedMessage}`, "_blank");
+    window.open(`https://wa.me/2347045677482?text=${encodedMessage}`, "_blank");
   };
 
   return (
@@ -122,7 +122,8 @@ const ContactSection = () => {
 
             {[
               { icon: MapPin, label: "Our Office", value: "4 Victor Anukwu Close, Golf Estate, GRA Enugu" },
-              { icon: Phone, label: "Phone / Whatsapp", value: "+234 8108730679" },
+              { icon: Phone, label: "Phone (Calls)", value: "+234 8108730679" },
+              { icon: MessageCircle, label: "WhatsApp", value: "+234 7045677482" },
               { icon: Mail, label: "Email", value: "edosonconstructions@gmail.com" },
             ].map((item) => (
               <div key={item.label} className="flex gap-4 items-start">

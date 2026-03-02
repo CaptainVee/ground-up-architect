@@ -8,7 +8,7 @@ import heroRoad from "@/assets/hero-road.jpg";
 const slides = [
   {
     image: heroConstruction,
-    subtitle: "Building Excellence Since 2005",
+    subtitle: "Building Excellence in Construction",
     title: ["WE BUILD YOUR", "VISION", "INTO", "REALITY"],
     description:
       "From structural design to complete construction, we deliver projects with precision, quality, and unwavering commitment to excellence.",

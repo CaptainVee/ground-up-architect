@@ -1,7 +1,6 @@
 import p1Main from "@/assets/projects/project-1/project-1-01.jpeg";
 import p1Gallery1 from "@/assets/projects/project-1/project-1-02.jpeg";
 import p1Gallery2 from "@/assets/projects/project-1/project-1-03.jpeg";
-import p1Gallery3 from "@/assets/projects/project-1/project-1-04.jpeg";
 
 import p2Main from "@/assets/projects/project-2/project-2-01.jpeg";
 import p2Gallery1 from "@/assets/projects/project-2/project-2-02.jpeg";
@@ -15,8 +14,11 @@ import p3Gallery2 from "@/assets/projects/project-3/project-3-03.jpeg";
 
 import p4Main from "@/assets/projects/project-4/project-4-01.jpeg";
 import p4Gallery1 from "@/assets/projects/project-4/project-4-02.jpeg";
-import p4Gallery2 from "@/assets/projects/project-4/project-4-03.jpeg";
+import p4Gallery2 from "@/assets/projects/project-4/project-4-03.mp4";
 import p4Gallery3 from "@/assets/projects/project-4/project-4-04.jpeg";
+import p4Gallery4 from "@/assets/projects/project-4/project-4-05.jpeg";
+import p4Gallery5 from "@/assets/projects/project-4/project-4-06.jpeg";
+import p4Gallery6 from "@/assets/projects/project-4/project-4-06.mp4";
 
 import p5Main from "@/assets/projects/project-5/project-5-01.jpeg";
 import p5Gallery1 from "@/assets/projects/project-5/project-5-02.jpeg";
@@ -26,7 +28,15 @@ import p5Gallery3 from "@/assets/projects/project-5/project-5-04.jpeg";
 import p6Main from "@/assets/projects/project-6/project-6-01.jpeg";
 import p6Gallery1 from "@/assets/projects/project-6/project-6-02.jpeg";
 import p6Gallery2 from "@/assets/projects/project-6/project-6-03.jpeg";
-import p6Gallery3 from "@/assets/projects/project-6/project-6-04.jpeg";
+import p6Gallery3 from "@/assets/projects/project-6/project-6-04.mp4";
+
+import p7Main from "@/assets/projects/project-7/project-7-01.jpeg";
+import p7Gallery1 from "@/assets/projects/project-7/project-7-02.jpeg";
+
+import p8Main from "@/assets/projects/project-8/project-8-01.jpeg";
+import p8Gallery1 from "@/assets/projects/project-8/project-8-01.mp4";
+import p8Gallery2 from "@/assets/projects/project-8/project-8-02.mp4";
+import p8Gallery3 from "@/assets/projects/project-8/project-8-03.mp4";
 
 export const projectsData = [
   {
@@ -48,7 +58,7 @@ export const projectsData = [
         "Adequate parking space",
         "24/7 security system",
       ],
-      gallery: [p1Main,p1Gallery1, p1Gallery2, p1Gallery3],
+      gallery: [p1Main,p1Gallery1, p1Gallery2],
     },
   },
   {
@@ -114,7 +124,7 @@ export const projectsData = [
         "Waste management",
         "Proper ventilation",
       ],
-      gallery: [p4Main, p4Gallery1, p4Gallery2, p4Gallery3],
+      gallery: [p4Main, p4Gallery1, p4Gallery2, p4Gallery3, p4Gallery4, p4Gallery5, p4Gallery6],
     },
   },
   {
@@ -159,6 +169,50 @@ export const projectsData = [
         "Water circulation system",
       ],
       gallery: [p6Main, p6Gallery1, p6Gallery2, p6Gallery3],
+    },
+  },
+  {
+    id: 7,
+    image: p7Main,
+    title: "4 Bedroom Bungalow",
+    category: "Residential",
+    location: "Enugu State",
+    description:
+      "Modern 4-bedroom bungalow with contemporary design and premium finishes for comfortable family living.",
+    year: 2023,
+    status: "Completed",
+    details: {
+      duration: "9 months",
+      scope: "Design & Construction",
+      features: [
+        "4 spacious bedrooms",
+        "Modern kitchen",
+        "Elegant living areas",
+        "Professional landscaping",
+      ],
+      gallery: [p7Main, p7Gallery1],
+    },
+  },
+  {
+    id: 8,
+    image: p8Main,
+    title: "Borehole Drilling Project",
+    category: "Industrial",
+    location: "Enugu State",
+    description:
+      "Professional borehole drilling and water resource management project with comprehensive documentation and video documentation.",
+    year: 2024,
+    status: "Completed",
+    details: {
+      duration: "2 months",
+      scope: "Water Resource Management",
+      features: [
+        "Deep borehole drilling",
+        "Water quality testing",
+        "Pump installation",
+        "System commissioning",
+      ],
+      gallery: [p8Main, p8Gallery1, p8Gallery2, p8Gallery3],
     },
   },
 ];

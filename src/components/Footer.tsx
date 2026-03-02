@@ -33,7 +33,7 @@ const Footer = () => (
       </div>
       <div className="border-t border-section-dark-foreground/10 pt-6 text-center">
         <p className="font-body text-xs text-section-dark-foreground/40">
-          © {new Date().getFullYear()} Edoson Constructions. All rights reserved.
+          © {new Date().getFullYear()} Edoson Constructions and Water Resources Limited. All rights reserved.
         </p>
       </div>
     </div>
