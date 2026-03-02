@@ -1,10 +1,16 @@
 import { motion } from "framer-motion";
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { ArrowLeft, MapPin, Calendar, CheckCircle, Clock, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, MapPin, Calendar, CheckCircle, Clock, ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { useState } from "react";
 import { projectsData } from "@/data/projects";
 import Navbar from "@/components/Navbar";
+
+const isVideoFile = (src: string): boolean => {
+  if (!src) return false;
+  const videoExtensions = ['.mp4', '.webm', '.mov', '.avi', '.mkv'];
+  return videoExtensions.some(ext => src.toLowerCase().endsWith(ext));
+};
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -227,11 +233,19 @@ const ProjectDetail = () => {
                 transition={{ duration: 0.5 }}
                 className="w-full max-w-4xl mx-auto rounded-lg overflow-hidden mb-6 bg-section-dark-foreground/5 flex items-center justify-center"
               >
-                <img
-                  src={galleryImages[currentGalleryIndex]}
-                  alt={`Gallery ${currentGalleryIndex + 1}`}
-                  className="w-full h-auto max-h-[500px] object-contain"
-                />
+                {isVideoFile(galleryImages[currentGalleryIndex]) ? (
+                  <video
+                    src={galleryImages[currentGalleryIndex]}
+                    controls
+                    className="w-full h-auto max-h-[500px] object-contain"
+                  />
+                ) : (
+                  <img
+                    src={galleryImages[currentGalleryIndex]}
+                    alt={`Gallery ${currentGalleryIndex + 1}`}
+                    className="w-full h-auto max-h-[500px] object-contain"
+                  />
+                )}
               </motion.div>
 
               {/* Navigation Buttons */}
@@ -274,11 +288,17 @@ const ProjectDetail = () => {
                           : "border-secondary/20 hover:border-secondary/40"
                       }`}
                     >
-                      <img
-                        src={image}
-                        alt={`Thumbnail ${index + 1}`}
-                        className="w-full h-full object-cover"
-                      />
+                      {isVideoFile(image) ? (
+                        <div className="w-full h-full bg-section-dark-foreground/20 flex items-center justify-center">
+                          <Play className="w-6 h-6 text-secondary" />
+                        </div>
+                      ) : (
+                        <img
+                          src={image}
+                          alt={`Thumbnail ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      )}
                     </motion.button>
                   ))}
                 </div>

@@ -1,73 +1,91 @@
-# Welcome to your Lovable project
+# Edoson Constructions & Water Resources - Website
 
-## Project info
+## Project Overview
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+This is the official website for Edoson Constructions and Water Resources Limited, a professional construction, water resources, and engineering services company based in Enugu, Nigeria.
 
-## How can I edit this code?
+**Services:**
+- Building Construction
+- Structural Design
+- Reconstruction
+- Land Surveying
+- Borehole Drilling
+- Project Management
 
-There are several ways of editing your application.
+**Location**: 4 Victor Anukwu Close, Golf Estate, GRA Enugu
+**Contact**: +234 8108730679 (Calls) | +234 7045677482 (WhatsApp) | edosonconstructions@gmail.com
 
-**Use Lovable**
+## About Us
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Edoson Constructions and Water Resources Limited is a trusted partner in construction and water resource management with a proven track record of delivering quality projects with professionalism and attention to detail.
 
-Changes made via Lovable will be committed automatically to this repo.
+## Development Setup
 
-**Use your preferred IDE**
+### Requirements
+- Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Installation & Running
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repository
+git clone <YOUR_REPOSITORY_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd ground-up-architect
 
-# Step 3: Install the necessary dependencies.
+# Install dependencies
 npm i
+# or with bun
+bun install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server with hot reload
 npm run dev
+# or with bun
+bun run dev
 ```
 
-**Edit a file directly in GitHub**
+The development server will typically run at `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Technologies Used
 
-**Use GitHub Codespaces**
+This project is built with modern web technologies:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **Vite** - Fast build tool and dev server
+- **TypeScript** - Type-safe JavaScript
+- **React** - UI framework
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn-ui** - Component library
+- **Framer Motion** - Animation library
+- **EmailJS** - Email service integration (configure with your own credentials)
 
-## What technologies are used for this project?
+## Building for Production
 
-This project is built with:
+```sh
+npm run build
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+This will create an optimized production build in the `dist/` directory.
 
-## How can I deploy this project?
+## Project Structure
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+- `/src` - Source code
+  - `/components` - React components
+  - `/pages` - Page components
+  - `/assets` - Images and static files
+  - `/data` - Data files
+  - `/hooks` - Custom React hooks
+  - `/lib` - Utility functions
+- `/public` - Public static assets
 
-## Can I connect a custom domain to my Lovable project?
+## Configuration
 
-Yes, you can!
+### EmailJS Setup
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+To enable email notifications, configure EmailJS:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+1. Visit [https://dashboard.emailjs.com/](https://dashboard.emailjs.com/)
+2. Get your Public Key, Service ID, and Template ID
+3. Replace the constants in `src/components/ContactSection.tsx`:
+   - `EMAILJS_PUBLIC_KEY`
+   - `EMAILJS_SERVICE_ID`
+   - `EMAILJS_TEMPLATE_ID`
